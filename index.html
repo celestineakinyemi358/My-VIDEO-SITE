@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My VIDEO SITE | CITOG Media</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">CITOG Media</p>
+          <h1>Movie, Video & Reel Hub</h1>
+          <p>
+            Fast, seamless playback with an in-page player and instant selection
+            for every clip.
+          </p>
+        </div>
+        <div class="header-actions">
+          <button id="homeBtn" class="primary-btn">Home</button>
+          <button id="refreshBtn" class="secondary-btn">Refresh</button>
+        </div>
+      </header>
+
+      <section class="player-shell">
+        <div class="player-card">
+          <div class="player-info">
+            <span id="activeTag" class="video-tag">Featured</span>
+            <h2 id="activeTitle">The Modern Cinema Reel</h2>
+            <p id="activeDescription">
+              Enjoy a smooth stream without leaving the page. Click any title to
+              play instantly.
+            </p>
+          </div>
+          <video
+            id="videoPlayer"
+            controls
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80"
+          >
+            <source
+              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support HTML5 video.
+          </video>
+          <div class="player-controls">
+            <button id="playPauseBtn" class="control-btn">Play / Pause</button>
+            <button id="muteBtn" class="control-btn">Mute / Unmute</button>
+          </div>
+        </div>
+      </section>
+
+      <main class="content-grid">
+        <section class="library-panel panel">
+          <div class="panel-header">
+            <h3>Featured Videos</h3>
+            <p>Tap any clip to load instantly into the player.</p>
+          </div>
+          <div id="videoList" class="video-list"></div>
+        </section>
+
+        <aside class="recommendation-panel panel">
+          <div class="panel-header">
+            <h3>Trending Reels</h3>
+            <p>Watch high-speed edits and cinematic highlights.</p>
+          </div>
+          <div id="reelsList" class="reels-list"></div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
